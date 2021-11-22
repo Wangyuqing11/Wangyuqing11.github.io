@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+用例名称：仓库文件搜索
 
-You can use the [editor on GitHub](https://github.com/Wangyuqing11/Wangyuqing11.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+参与者：用户、系统管理员
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+用例描述：该用例描述一个系统用户搜索仓库文件的行为
 
-### Markdown
+触发器：当仓库文件被搜索时，用例触发
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+前置条件：搜索仓库文件的一方需要完成登陆操作
 
-```markdown
-Syntax highlighted code block
+后置条件：如果仓库中有该用户要搜索的文件，则显示文件信息
 
-# Header 1
-## Header 2
-### Header 3
+基本事件流：1.参与者登陆系统；
+			 2.系统验证用户信息及实名信息合法后做出响应；
+			 3.用户在系统中搜索查询仓库文件；
+			 4.系统生成并保存用户的查询记录；
+			 5.系统将搜索查询的文件信息结果发给用户；
+			 6.用户查看文件并可进行下载文件操作
 
-- Bulleted
-- List
+拓展事件流：如果实名信息有误或非法，系统会拒绝参与者访问和搜索仓库文件
 
-1. Numbered
-2. List
+结论：当用户收到系统发送的其要搜索的仓库文件页面时，用例结束
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Wangyuqing11/Wangyuqing11.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+数据需求：仓库文件信息、参与者的用户账号名、参与者的用户信息
